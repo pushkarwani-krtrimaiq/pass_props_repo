@@ -2,12 +2,17 @@ import React,{useState} from 'react'
 import CreateSections from './createSections';
 
 const Dashboard = () => {
-    const [data, setData] = useState([])
-    const store = (data) => {
-        console.log('viewing from parent component', data);
+    var [data, setData] = useState([]);
+    const store = (dataOutput) => {
+        data = dataOutput;
+        console.log('viewing from parent component', dataOutput);
     }
+    console.log(data);
   return (
-    <CreateSections store={store} data={data} setData={setData}/>
+    <div>
+        <CreateSections store={store} data={data} setData={setData}/>
+        <h1>{data.name}</h1>
+    </div>
    )
 }
 

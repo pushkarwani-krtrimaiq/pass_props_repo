@@ -19,7 +19,7 @@ const CreateLectures = ({store,data,setData}) => {
             <MDBCol>
             {dataValues.map((value, index) => {
                 return(
-                <MDBCard  value={data} onClick={() => setData([...data,value])}>
+                <MDBCard  value={data} onClick={() => setData([...data,value])} style={{cursor:"pointer"}}>
                     <div className='d-flex flex-wrap flex-column'>
                         <MDBCardImage src={value.imgSrc} alt='...' position='top' width={200} height={200}/>
                         <MDBCardBody>
