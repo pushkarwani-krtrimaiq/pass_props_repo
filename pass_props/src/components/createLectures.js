@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
     MDBCard,
     MDBCardImage,
@@ -9,15 +9,14 @@ import {
 } from "@krtrimaiq-cognitive-solutions/mdb-react-ui-kit";
 import {dataValues} from '../data/dataValues';
 
-const CreateLectures = ({store}) => {
-    const [data, setData] = useState([]);
+const CreateLectures = ({store,data,setData}) => {
     store(data);
     
 
   return (
     <div className={"d-flex flex-column w-100 h-100 mx-5 mb-5"}>
         <div className="d-flex justify-content-around w-100 h-100">
-            <MDBCol size={12} md={12}>
+            <MDBCol>
             {dataValues.map((value, index) => {
                 return(
                 <MDBCard  value={data} onClick={() => setData([...data,value])}>
