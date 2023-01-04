@@ -9,19 +9,18 @@ import {
 } from "@krtrimaiq-cognitive-solutions/mdb-react-ui-kit";
 import {dataValues} from '../data/dataValues';
 
-const CreateLectures = ({store,data,setData}) => {
-    store(data);
+const CreateLectures = ({data,setData}) => {
     
 
   return (
     <div className={"d-flex flex-column w-100 h-100 mx-5 mb-5"}>
-        <div className="d-flex justify-content-around w-100 h-100">
-            <MDBCol>
+        <div className="d-flex justify-content-around">
+            <MDBCol size={12} md={3}>
             {dataValues.map((value, index) => {
                 return(
                 <MDBCard  value={data} onClick={() => setData([...data,value])} style={{cursor:"pointer"}}>
-                    <div className='d-flex flex-wrap flex-column'>
-                        <MDBCardImage src={value.imgSrc} alt='...' position='top' width={200} height={200}/>
+                    <div className='d-flex flex-wrap flex-column p-5'>
+                        <MDBCardImage src={value.imgSrc} alt='...' position='top'/>
                         <MDBCardBody>
                             <MDBCardTitle>
                                 {value.name}

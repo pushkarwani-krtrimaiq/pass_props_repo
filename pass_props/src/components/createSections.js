@@ -1,10 +1,12 @@
 import React from 'react'
 import CreateLectures from './createLectures';
+import NestedLectures from './nestedLectures';
 
-const CreateSections = ({store, data, setData}) => {
+const CreateSections = ({data, setData}) => {
     
   return (
-    <CreateLectures store={store} data={data} setData={setData}/>
+    // <CreateLectures  data={data} setData={setData}/>
+    <NestedLectures/>
   )
 }
 
